@@ -1,0 +1,73 @@
+/* ASSIGNMENT_1, Suha Park, 301284833, May 29th */
+
+body {
+  padding: 50px;
+  font: 14px 'Lucida Grande', Helvetica, Arial, sans-serif;
+  width: 80%;
+  margin: auto;
+}
+
+a {
+  color: #000000;
+  text-decoration: none;
+}
+
+nav {
+  text-align: center;
+  font-size: x-large;
+}
+
+nav li {
+  list-style: none;
+  display: inline;
+}
+nav a {
+  margin: 3%;
+}
+
+ul {
+}
+
+h1 {
+  text-align: center;
+}
+
+#profile {
+  text-align: left;
+}
+
+img {
+  float: left;
+  margin-right: 1%;
+}
+
+footer {
+  width: 80%;
+  height: 100px;
+  position: absolute;
+  bottom: 0;
+}
+
+p {
+  font-size: large;
+}
+
+.main {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.grid_container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.grid_item {
+  width: 30%;
+  height: 90%;
+  background-color: rgb(255, 255, 255);
+}
+
+footer {
+  text-align: center;
+}
