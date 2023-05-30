@@ -1,5 +1,3 @@
-/* ASSIGNMENT_1, Suha Park, 301284833, May 29th */
-
 body {
   padding: 50px;
   font: 14px 'Lucida Grande', Helvetica, Arial, sans-serif;
@@ -7,6 +5,7 @@ body {
   margin: auto;
 }
 
+/* ASSIGNMENT_1, Suha Park, 301284833, May 29th */
 a {
   color: #000000;
   text-decoration: none;
@@ -23,9 +22,6 @@ nav li {
 }
 nav a {
   margin: 3%;
-}
-
-ul {
 }
 
 h1 {
