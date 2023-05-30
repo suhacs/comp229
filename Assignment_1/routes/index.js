@@ -4,7 +4,7 @@ const path = require('path');
 
 app.use('/public', express.static(path.join(__dirname, '../public')));
 
-app.set('views', '../views');
+app.set('views', './views');
 app.set('view engine', 'ejs');
 
 app.get('/', (req, res, next) => {
