@@ -33,13 +33,12 @@ h1 {
 }
 
 img {
-  float: left;
   margin-right: 1%;
 }
 
 footer {
   width: 80%;
-  height: 100px;
+  height: 2.5rem;
   position: absolute;
   bottom: 0;
 }
@@ -59,11 +58,35 @@ p {
 }
 
 .grid_item {
-  width: 30%;
+  width: 50%;
   height: 90%;
   background-color: rgb(255, 255, 255);
 }
 
+.myImage {
+  float: left;
+}
+
+#contents {
+  position: relative;
+  top: 10%;
+  left: 5%;
+}
 footer {
+  width: 100%;
+  clear: both;
+  position: relative;
+  height: 200px;
+  margin-top: -5px;
   text-align: center;
+}
+
+.link {
+  font-weight: bold;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: space-around;
 }

@@ -6,10 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Assignment1</title>
     <link rel="stylesheet" href="../public/stylesheets/style.css" />
+    <style>
+      img:hover {
+        opacity: 0.5;
+      }
+      div {
+        text-align: center;
+      }
+    </style>
   </head>
   <body>
     <%- include('partials/header') %>
-    <h1>HTML5, CSS, JavaScript, C#, SQL</h1>
+    <div class="container">
+      <div class="element">
+        <img src="../public/images/UI.jpg" alt="" width="80%" />
+      </div>
+      <div class="element">
+        <img src="../public/images/website.jpg" alt="" width="80%" />
+      </div>
+      <div class="element"><H1>UI & UX Design</H1></div>
+      <div class="element"><H1>Website Development</H1></div>
+    </div>
 
     <%- include('partials/footer') %>
   </body>
