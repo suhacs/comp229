@@ -23,11 +23,17 @@ const products = new mongoose.Schema({
 });
 
 const categories = new mongoose.Schema({
-  name: {
+  name: { type: String, required: true },
+  categories: {
     type: String,
+    enum: ['Men', 'Women', 'Teens'],
     required: true,
   },
+  // Other fields...
 });
 
 const product = mongoose.model('Product', products);
 module.exports = product;
+
+const category = mongoose.model('Categories', categories);
+module.exports = category;

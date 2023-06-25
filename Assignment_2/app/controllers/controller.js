@@ -82,13 +82,19 @@ const deleteAll = async (req, res) => {
 
 const findProductsByName = async (req, res) => {
   try {
-    const { name } = req.query;
-    const products = await Product.find({
-      name: { $regex: name, $options: 'i' },
+    const name = req.query.name;
+
+    const condition = name
+      ? { name: { $regex: new RegExp(name), $options: 'i' } }
+      : {};
+
+    const data = await Product.find(condition);
+
+    res.send(data);
+  } catch (err) {
+    res.status(500).send({
+      message: err.message || 'Some error occured!',
     });
-    res.json(products);
-  } catch (error) {
-    res.status(500).json({ error: error.message });
   }
 };
 
