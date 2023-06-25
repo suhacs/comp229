@@ -50,17 +50,6 @@ var corsOptions = {
   origin: 'http://localhost:8081',
 };
 
-// set port, listen for requests
-
-// Create a model based on the product schema
-
-// Define the CRUD routes
-
-// Create a new product
-// Rest of the code...
-
-// Create a new product
-
 app.get('/', (req, res) => {
   res.json({ message: 'Welcome to Suha application.' });
 });
