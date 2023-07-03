@@ -24,21 +24,13 @@
 //   console.log('on port!');
 // });
 
-const mongoose = require('mongoose');
 const express = require('express');
 const cors = require('cors');
 const app = express();
-const productController = require('./app/controllers/controller');
+const db = require('./app/models');
 
-app.use(cors(corsOptions));
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
-
-mongoose
-  .connect(
-    'mongodb+srv://parksuha94:Dlgkrsus2@suhapark.xi9ourq.mongodb.net/DressStore?retryWrites=true&w=majority',
-    { useNewUrlParser: true, useUnifiedTopology: true }
-  )
+db.mongoose
+  .connect(db.url, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => {
     console.log('Connected to the database!');
   })
@@ -50,22 +42,15 @@ var corsOptions = {
   origin: 'http://localhost:8081',
 };
 
+app.use(cors(corsOptions));
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
+require('./app/routes/route')(app);
+
 app.get('/', (req, res) => {
   res.json({ message: 'Welcome to Suha application.' });
 });
-
-app.get('/api/products', productController.findProductsByName);
-app.get('/api/products', productController.getAllProducts);
-
-// Retrieve all products
-app.get('/api/products/:id', productController.getProductById);
-
-// Retrieve a single product by ID
-app.post('/api/products', productController.addNewProduct);
-
-app.put('/api/products/:id', productController.updateProductById);
-app.delete('/api/products/:id', productController.deleteProductById);
-app.delete('/api/products', productController.deleteAll);
 
 app.listen(8080, () => {
   console.log('on port!');
